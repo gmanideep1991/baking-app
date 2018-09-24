@@ -89,7 +89,7 @@ public class RecipeListFragment extends Fragment {
             Toast.makeText(getContext(),"Recipes are empty",Toast.LENGTH_LONG).show();
         }
         else{
-            RecipeListAdapter recipeListAdapter = new RecipeListAdapter(recipes);
+            RecipeListAdapter recipeListAdapter = new RecipeListAdapter(recipes,getContext());
             recipe_list.setAdapter(recipeListAdapter);
             recipe_list.setLayoutManager(recipeListManager);
         }
