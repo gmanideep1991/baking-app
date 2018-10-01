@@ -1,5 +1,7 @@
 package com.deepu.android.bakingapp.fragments;
 
+import static com.deepu.android.bakingapp.utilities.NetworkUtils.isInternetAvailable;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -42,6 +44,7 @@ public class RecipeListFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_recipe_list,container,false);
         ButterKnife.bind(this,rootView);
+
         populateRecipes();
         return rootView;
 
@@ -90,8 +93,8 @@ public class RecipeListFragment extends Fragment {
         }
         else{
             RecipeListAdapter recipeListAdapter = new RecipeListAdapter(recipes,getContext());
+            recipe_list.setLayoutManager(new LinearLayoutManager(getContext()));
             recipe_list.setAdapter(recipeListAdapter);
-            recipe_list.setLayoutManager(recipeListManager);
         }
     }
 }

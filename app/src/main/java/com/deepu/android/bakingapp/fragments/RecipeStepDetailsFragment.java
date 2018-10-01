@@ -60,9 +60,10 @@ public class RecipeStepDetailsFragment extends Fragment {
         if(videoUrl!=null && !videoUrl.isEmpty()){
             thumbnail.setVisibility(View.GONE);
             videoExists = true;
-            if(savedInstanceState == null){
+            if(savedInstanceState==null){
                 initializeExoPlayer(Uri.parse(videoUrl));
-            }else{
+            }
+            else{
                 simpleExoPlayerView.setPlayer(player);
             }
         }
@@ -83,7 +84,7 @@ public class RecipeStepDetailsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            RecipeStep recipeStep = bundle.getParcelable(getString(R.string.description));
+            RecipeStep recipeStep = bundle.getParcelable(getString(R.string.recipe_step_detail));
             description = recipeStep.getDescription();
             videoUrl = recipeStep.getVideoURL();
             imageUrl = recipeStep.getThumbnailURL();
@@ -100,7 +101,7 @@ public class RecipeStepDetailsFragment extends Fragment {
     }
 
     private void initializeExoPlayer(Uri uri) {
-        if(player==null){
+        if(player == null){
             DefaultBandwidthMeter bandWidthMeter = new DefaultBandwidthMeter();
             TrackSelection.Factory videoTrackSelectionFactory =
                     new AdaptiveTrackSelection.Factory(bandWidthMeter);

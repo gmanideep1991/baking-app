@@ -13,6 +13,8 @@ public class Ingredient implements Parcelable {
     @SerializedName("ingredient")
     private String name;
 
+    public Ingredient(){}
+
     protected Ingredient(Parcel in) {
         if (in.readByte() == 0) {
             quantity = null;

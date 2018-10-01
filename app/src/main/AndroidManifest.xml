@@ -30,10 +30,6 @@
                 android:resource="@xml/ingredient_widget_provider_info" />
         </receiver>
 
-        <activity
-            android:name=".activities.RecipeDetailsActivity"
-            android:label="@string/title_activity_recipe_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

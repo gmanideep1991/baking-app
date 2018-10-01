@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Baking App</string>
     <string name="recipe">RECIPE</string>
+    <string name="recipe_steps">RECIPE_STEPS</string>
     <string name="description">DESCRIPTION</string>
+    <string name="recipe_step_detail">RECIPE_STEP_DETAIL</string>
+    <string name="recipe_ingredients">INGREDIENTS</string>
     <string name="appwidget_text">Please select your favorite recipe from baking app.</string>
     <string name="add_widget">Add widget</string>
     <string name="title_activity_recipe_details">activity_recipe_details</string>
@@ -10,4 +13,7 @@
     <string name="tab_text_3">Tab 3</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">item Detail</string>
+    <string name="network_unavailable">Network Unavailable</string>
 </resources>

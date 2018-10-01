@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.deepu.android.bakingapp.IngredientWidgetProvider;
 import com.deepu.android.bakingapp.R;
-import com.deepu.android.bakingapp.activities.RecipeDetailsActivity;
+import com.deepu.android.bakingapp.activities.RecipeStepsActivity;
 import com.deepu.android.bakingapp.models.Recipe;
 import com.deepu.android.bakingapp.utilities.IngredientUtils;
 
@@ -79,9 +79,8 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
     }
 
     private void launchRecipeSteps(Recipe recipe){
-        Intent intent = new Intent(context, RecipeDetailsActivity.class);
-       // Intent intent = new Intent(context, RecipeStepsActivity.class);
-        intent.putExtra(context.getResources().getString(R.string.recipe), recipe);
+        Intent intent = new Intent(context, RecipeStepsActivity.class);
+        intent.putExtra(context.getResources().getString(R.string.recipe),recipe);
         context.startActivity(intent);
         updateWidget(IngredientUtils.convertToString(recipe.getIngredients()));
     }

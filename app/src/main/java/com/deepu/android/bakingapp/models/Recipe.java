@@ -21,6 +21,8 @@ public class Recipe implements Parcelable {
     @SerializedName("steps")
     private List<RecipeStep> recipeSteps;
 
+    public Recipe(){}
+
     protected Recipe(Parcel in) {
         name = in.readString();
         servings = in.readInt();

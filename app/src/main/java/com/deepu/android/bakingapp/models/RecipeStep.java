@@ -17,6 +17,8 @@ public class RecipeStep implements Parcelable {
     @SerializedName("thumbnailURL")
     private String thumbnailURL;
 
+    public RecipeStep(){}
+
     protected RecipeStep(Parcel in) {
         id = in.readInt();
         shortDescription = in.readString();

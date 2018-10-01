@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/show_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp">
+
         <TextView
-            android:id="@+id/ingredientsText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="#09C"
-            android:contentDescription="@string/appwidget_text"
-            android:text="@string/appwidget_text"
-            android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:textStyle="bold|italic" />
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/recipe_steps_recyclerView">
+            android:padding="10dp"
+            android:text="Ingredients"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recipe_steps_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
-
-
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
